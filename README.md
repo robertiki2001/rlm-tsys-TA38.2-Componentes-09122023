@@ -1,4 +1,5 @@
 # T352Componentes
+Link de la aplicación: https://main.dp1q0knh08fif.amplifyapp.com/
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.6.
 
