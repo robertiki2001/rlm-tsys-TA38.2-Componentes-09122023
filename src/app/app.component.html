@@ -1,0 +1,50 @@
+<router-outlet></router-outlet>
+<div class="p-5 container">
+  <div class="row mb-3 justify-content-between">
+    <div class="col-sm-2"></div>
+    <h2 class="display-5 col-sm-9">Formulario de contacto</h2>
+  </div>
+  <div class="row mb-3 justify-content-between">
+    <label for="nombre" class="col-sm-2 col-form-label text-end"><b>Nombre</b></label>
+    <div class="col-sm-9">
+      <input type="text" [(ngModel)]="nombre" class="form-control" aria-describedby="nombreHelpBlock" placeholder="Nombre y apellido">
+      <div *ngIf="nombre == ''" id="nombreHelpBlock" class="form-text text-danger">
+        Introduzca su nombre y apellido
+      </div>
+    </div>
+  </div>
+  <div class="row mb-3 justify-content-between">
+    <label for="email" class="col-sm-2 col-form-label text-end"><b>Email</b></label>
+    <div class="col-sm-9">
+      <input type="text" [(ngModel)]="email" class="form-control" aria-describedby="emailHelpBlock" placeholder="ejemplo@dominio.com">
+      <div *ngIf="email == ''" id="emailHelpBlock" class="form-text text-danger">
+        Introduzca un email valido
+      </div>
+    </div>
+  </div>
+  <div class="row mb-3 justify-content-between">
+    <label for="mensaje" class="col-sm-2 col-form-label text-end"><b>Mensaje</b></label>
+    <div class="col-sm-9">
+      <textarea class="form-control" aria-describedby="mensajeHelpBlock" [(ngModel)]="mensaje" rows="3"></textarea>
+      <div *ngIf="mensaje == ''" id="mensajeHelpBlock" class="form-text text-danger">
+        Introduzca un mensaje
+      </div>
+    </div>
+  </div>
+  <div class="row mb-3 justify-content-between">
+    <label for="anti_spam" class="col-sm-2 col-form-label text-end"><b>2 + 3 = ?</b></label>
+    <div class="col-sm-9">
+      <input type="text" [(ngModel)]="anti_spam" class="form-control" aria-describedby="anti_spamHelpBlock" placeholder="Respuesta">
+      <div *ngIf="anti_spam != '5'" id="anti_spamHelpBlock" class="form-text text-danger">
+        Validacion anti-spam incorrecta
+      </div>
+    </div>
+  </div>
+  <div class="row mb-3 justify-content-between">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-9">
+      <button (click)="guardar()" class="btn btn-secondary mt-3">Guardar</button>
+    </div>
+  </div>
+  <app-listaregistro [datos]="registros"></app-listaregistro>
+</div>

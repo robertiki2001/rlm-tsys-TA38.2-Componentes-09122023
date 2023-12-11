@@ -1,0 +1,12 @@
+<div class="d-flex flex-column justify-content-center text-center">
+    <h2 class="display-6 my-5" *ngIf="datos.length > 0">Listado Clientes</h2>
+    <table *ngIf="datos.length > 0">
+      <tbody>
+        <tr *ngFor="let art of datos" class="border-bottom">
+          <td class="px-5 py-1">{{art.nombre}}</td>
+          <td class="px-5 py-1">{{art.email}}</td>
+          <td class="px-5 py-1">{{art.mensaje}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
